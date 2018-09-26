@@ -10,12 +10,12 @@ class Triangle
     if @side1 != 0 && @side2 != 0 && @side3 != 0 && @side1 + @side2 > @side3 && @side1 + @side3 > @side2 && @side2 + @side3 > @side1
       if @side1 == @side2 || @side1 == @side3 || @side2 == @side3
         if @side2 == @side3 && @side1 = @side2
-          :equilateral
+          return :equilateral
         else
-          :isosceles
+          return :isosceles
         end
       end
-      :scalene
+      return :scalene
     else
       begin
         raise TriangleError
