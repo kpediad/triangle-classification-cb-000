@@ -18,17 +18,9 @@ class Triangle
       return :scalene
     else
       raise TriangleError
-      # begin
-      #   raise TriangleError
-      # rescue TriangleError => error
-      #   puts error.message
-      # end
     end
   end
 
   class TriangleError < StandardError
-    def message
-      "Triangle sides are invalid!"
-    end
   end
 end
